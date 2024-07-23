@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "GEO";
+  src: url("../fonts/darkgames-geo.ttf") format("ttf"), url("../fonts/darkgames-geo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "GEO", sans-serif;
+  width: 100%;
+}
+body nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 100vh;
+  background-color: #1D1D1D;
+  padding: 45px 0;
+}/*# sourceMappingURL=style.css.map */
