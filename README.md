@@ -1,3 +1,3 @@
 # DarkGames
  PC Games Website
-# © 2023 darkindustry.net
+# © 2023-2024 darkindustry.net
