@@ -6,6 +6,7 @@
     <title>DarkGames</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./images/icons/favicon.png" type="image/png">
 </head>
 <body>
     <nav>
@@ -72,7 +73,63 @@
         </div>
     </nav>
     <main>
-        <div class="main-navigation"></div>
+        <div class="main-navigation container">
+            <div class="logo">
+                <img src="./images/logo.png" alt="DarkGames">
+            </div>
+
+            <div class="profile">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search">
+                </div>
+                <a href="#">პროფილი <i class="fa-regular fa-circle-user"></i></a>
+            </div>
+        </div>
+        <section class="top-slider container">
+            <div class="slider-container">
+                <button class="arrow left-arrow" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="slider">
+                  <div class="slide">
+                    <img src="./images/1699300066_header.jpg" alt="">
+                    <div class="text">
+                        <h5>ASSASSINS'S CREED SYNDICATE</h5>
+                        <h6>ACTION/ADVENTURE/PC GAMES/3RD PERSON</h6>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img src="./images/1699303637_header.jpg" alt="">
+                    <div class="text">
+                        <h5>ASSASSINS'S CREED VALHLLA</h5>
+                        <h6>ACTION/ADVENTURE/PC GAMES/3RD PERSON</h6>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img src="./images/1699732976_header.jpg" alt="">
+                    <div class="text">
+                        <h5>GRAND THEFT AUTO IV</h5>
+                        <h6>ACTION/ADVENTURE/PC GAMES</h6>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img src="./images/1699732976_header.jpg" alt="">
+                    <div class="text">
+                        <h5>GRAND THEFT AUTO IV</h5>
+                        <h6>ACTION/ADVENTURE/PC GAMES</h6>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img src="./images/1699732976_header.jpg" alt="">
+                    <div class="text">
+                        <h5>GRAND THEFT AUTO IV</h5>
+                        <h6>ACTION/ADVENTURE/PC GAMES</h6>
+                    </div>
+                  </div>
+                </div>
+                <button class="arrow right-arrow" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
+        </section>
     </main>
+    <script src="./js/script.js"></script>
 </body>
 </html>
