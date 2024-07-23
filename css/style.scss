@@ -8,10 +8,11 @@
 
 $nav-color: #1D1D1D;
 $main-color: #191919;
-$font-color: #C7C7C7;
+$font-color: #c0c0c0;
 $white-color: #FFFFFF;
 $primary-color: #46108D;
 $primary-hover: #39136B;
+$black-color: #000000;
 
 * {
     margin: 0;
@@ -22,6 +23,10 @@ $primary-hover: #39136B;
 body {
     font-family: 'GEO', sans-serif;
     width: 100%;
+    display: grid;
+    grid-template-columns: 200px 100%;
+    position: relative;
+    background-color: $main-color;
     nav {
         display: flex;
         flex-direction: column;
@@ -31,5 +36,164 @@ body {
         height: 100vh;
         background-color: $nav-color;
         padding: 45px 0;
+        border-radius: 0 20px 20px 0;
+        position: sticky;
+        top: 0;
+        .top {
+            display: flex;
+            flex-direction: column;
+            h1 {
+                color: $white-color;
+                margin-bottom: 45px;
+                i {
+                    padding-right: 10px;
+                }
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: $font-color;
+                        font-size: 18px;
+                        transition: 0.3s ease;
+                    }
+                    a:hover {
+                        color: $white-color;
+                    }
+                    .dropdown {
+                        position: relative;
+                        display: inline-block;
+                        a.dropbtn {
+                            text-decoration: none;
+                            color: $font-color;
+                            font-size: 18px;
+                            transition: 0.3s ease;
+                            .fa-chevron-up {
+                                padding-left: 7px !important;
+                                transition: 0.3s ease;
+                            }
+                        }
+                        .dropdown-content {
+                            display: none;
+                            position: absolute;
+                            background-color: $black-color;
+                            min-width: 160px;
+                            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                            z-index: 1;
+                            border-radius: 10px;
+                            padding: 12px;
+                            left: -20px; 
+                            a {
+                                color: $white-color;
+                                width: 90px;
+                                height: 50px;
+                                text-decoration: none;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: #1d1d1d;
+                                border-radius: 12px;
+                                transition: 0.3s ease;
+                            }
+                            a:hover {
+                                background-color: #3a3a3a;
+                                border-radius: 15px;
+                            }
+                        }
+                    }
+                    .dropdown:hover .dropdown-content {
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        gap: 7px;
+                    }
+                    .dropdown:hover .dropbtn {
+                        color: $white-color;
+                    }
+                    .dropdown:hover .dropbtn .fa-chevron-up {
+                        transform: rotateX(-180deg);
+                    }
+                }
+            }
+        }
+        .bottom {
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                .flag {
+                    width: 30px;
+                    height: 30px;
+                    padding-right: 10px;
+                }
+                a.dropbtn {
+                    text-decoration: none;
+                    color: $font-color;
+                    font-size: 18px;
+                    transition: 0.3s ease;
+                    display: flex;
+                    align-items: center;
+                    .fa-chevron-up {
+                        padding-left: 7px !important;
+                        transition: 0.3s ease;
+                    }
+                }
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: $black-color;
+                    min-width: 160px;
+                    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                    z-index: 1;
+                    border-radius: 10px;
+                    left: -25px; 
+                    top: -150%;
+                    a {
+                        color: $white-color;
+                        text-decoration: none;
+                        display: flex;
+                        width: 100%;
+                        justify-content: flex-start;
+                        align-items: center;
+                        border-radius: 10px;
+                        transition: 0.3s ease;
+                        padding: 5px 10px;
+                    }
+                    a:hover {
+                        background-color: #3a3a3a;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .dropdown:hover .dropbtn {
+                color: $white-color;
+            }
+            .dropdown:hover .dropbtn .fa-chevron-up {
+                transform: rotateX(-180deg);
+            }
+        }
+    }
+    main {
+        width: calc(100% - 200px);
+        overflow-y: auto;
+        background-color: $main-color;
+        padding: 30px;
+        animation: pageLoad 1s;
+        @keyframes pageLoad {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        h2 {
+            color: $white-color;
+        }
     }
 }
